@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, AddProductActivity.class);
         startActivity(intent);
         Toast.makeText(this, "Add product", Toast.LENGTH_SHORT).show();
+        getData();
     }
 
     public void getData() {

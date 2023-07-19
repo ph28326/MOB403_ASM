@@ -69,6 +69,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProVH> {
         }
 
         Picasso.get().load(url+product.image)
+                .resize(900, 600)
                 .placeholder(R.drawable.loading)
                 .error(R.drawable.loading)
                 .into(holder.iv_pro);
