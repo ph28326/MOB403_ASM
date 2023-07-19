@@ -36,7 +36,7 @@ public class DetailProductActivity extends AppCompatActivity {
     ImageView iv_product;
     Button btn_reload, btn_delete, btn_update;
     ProgressDialog pd;
-    private static final String[] categories = {"smartphone", "laptop", "smartwatch", "bluetooth speaker", "wireless headphones", "power bank"};
+    public static final String[] categories = {"Smartphone", "Laptop", "Smartwatch", "Bluetooth Speaker", "Wireless Headphones", "Power Bank"};
     public static final String[] brands = {"Samsung", "Apple", "Oppo", "Sony", "Nokia", "Xiaomi", "Realme", "JBL", "BeU"};
 
     @Override
@@ -61,13 +61,13 @@ public class DetailProductActivity extends AppCompatActivity {
     }
 
     public void InitView() {
-        ed_name = findViewById(R.id.ed_acti_add_name);
+        ed_name = findViewById(R.id.edtNameProDetail);
         ed_price0 = findViewById(R.id.ed_acti_add_p0);
         ed_price1 = findViewById(R.id.ed_acti_add_p1);
         ed_des = findViewById(R.id.ed_acti_add_des);
-        sp_brand = findViewById(R.id.sp_add_brand);
-        sp_category = findViewById(R.id.sp_add_category);
-        iv_product = findViewById(R.id.iv_acti_add);
+        sp_brand = findViewById(R.id.spBrandDetail);
+        sp_category = findViewById(R.id.spCategoryDetail);
+        iv_product = findViewById(R.id.ivProDetail);
         til_1 = findViewById(R.id.til_1);
         btn_update = findViewById(R.id.btn_update_pro);
         btn_delete = findViewById(R.id.btn_delete_pro);

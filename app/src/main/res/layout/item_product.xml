@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
     android:background="@drawable/br_item_pro"
+    android:orientation="vertical"
     android:paddingBottom="8dp">
 
     <ImageView
@@ -13,9 +14,6 @@
         android:layout_height="110dp"
         android:layout_marginTop="8dp"
         android:padding="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/loading" />
 
     <TextView
@@ -29,44 +27,61 @@
         android:text="TextView"
         android:textColor="#000000"
         android:textSize="13sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_image" />
-
-    <TextView
-        android:id="@+id/tv_price0"
+        android:textStyle="bold" />
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
-        android:foreground="@drawable/gach_text"
-        android:text="TextView"
-        android:textSize="11sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+        android:orientation="horizontal"
+        android:paddingRight="2dp"
+        android:background="#FF0000">
+        <ImageView
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_flash_on_24"/>
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FLASH SALE"
+            android:paddingLeft="2dp"
+            android:textSize="14dp"
+            android:textColor="@color/white"
+            android:background="#FF0000"/>
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/tv_price1"
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:text="TextView"
-        android:textColor="#FF5722"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_price0" />
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_price0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:foreground="@drawable/gach_text"
+            android:text="Giá cũ"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tv_price1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="Giá mới"
+            android:textColor="#FF5722"
+            android:textSize="16sp" />
+    </LinearLayout>
 
     <ImageView
-        android:id="@+id/iv_brand"
+        android:id="@+id/iv_delete"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginTop="6dp"
         android:layout_marginEnd="6dp"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_cancel_24" />
 
     <TextView
@@ -78,8 +93,7 @@
         android:padding="4dp"
         android:text="delete"
         android:textColor="@color/white"
-        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

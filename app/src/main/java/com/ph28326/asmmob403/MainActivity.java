@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        rcv = findViewById(R.id.myrcv);
+        rcv = findViewById(R.id.rcvProduct);
         setProgressDialog();
         getData();
     }
@@ -53,7 +54,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void add(View view) {
-        startActivity(new Intent(MainActivity.this, DetailProductActivity.class));
+        Intent intent = new Intent(MainActivity.this, AddProductActivity.class);
+        startActivity(intent);
+        Toast.makeText(this, "Add product", Toast.LENGTH_SHORT).show();
     }
 
     public void getData() {

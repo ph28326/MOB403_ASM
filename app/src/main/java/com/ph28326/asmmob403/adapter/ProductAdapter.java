@@ -58,12 +58,12 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProVH> {
         }
         holder.tv_name.setText(product.name);
         try {
-            holder.tv_price0.setText(Tools.IntegerToVND(Integer.parseInt(product.price0))+"₫");
+            holder.tv_price0.setText("₫"+Tools.IntegerToVND(Integer.parseInt(product.price0)));
         }catch (Exception e){
 
         }
         try {
-            holder.tv_price1.setText(Tools.IntegerToVND(Integer.parseInt(product.price1))+"₫");
+            holder.tv_price1.setText("₫"+Tools.IntegerToVND(Integer.parseInt(product.price1)));
         }catch (Exception e){
 
         }
@@ -140,7 +140,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProVH> {
             tv_name = i.findViewById(R.id.tv_name);
             tv_price1 = i.findViewById(R.id.tv_price1);
             tv_price0 = i.findViewById(R.id.tv_price0);
-            iv_brand = i.findViewById(R.id.iv_brand);
+            iv_brand = i.findViewById(R.id.iv_delete);
             iv_pro = i.findViewById(R.id.iv_image);
             tv_del = i.findViewById(R.id.tv_del_pro);
         }
